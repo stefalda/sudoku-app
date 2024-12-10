@@ -4,6 +4,12 @@ A sleek and user-friendly Sudoku web application developed using Angular.
 Challenge yourself with Sudoku puzzles of varying difficulty levels and track
 your progress.
 
+## Play
+
+You can play it now here:
+
+[https://stefalda.github.io/sudoku-app/](https://stefalda.github.io/sudoku-app/)
+
 ## Features
 
 - **Responsive Design**: Fully responsive interface, optimized for desktop,
