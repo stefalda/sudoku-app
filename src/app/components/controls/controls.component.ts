@@ -24,7 +24,6 @@ export class ControlsComponent {
 
   newGame() {
     this.openLevelDialog();
-    //this.sudokuService.generateNewGame();
   }
 
   openLevelDialog() {

@@ -8,6 +8,7 @@ export class SudokuService {
   difficulty: DifficultyLevel = 'EASY';
   errors = signal(0);
   gameEnded = signal(false);
+  shouldSave = signal(false);
 
   grid: WritableSignal<Grid> = signal({} as Grid);
   // Copies
@@ -94,6 +95,7 @@ export class SudokuService {
     this.originalGrid = structuredClone(grid);
     this.grid.set(grid);
     this.selectedCell.set(null);
+    this.shouldSave.set(true);
   }
 
 
@@ -103,7 +105,7 @@ export class SudokuService {
     this.grid.set(structuredClone(this.originalGrid));
     this.gameEnded.set(false);
     this.selectedCell.set(null);
-
+    this.shouldSave.set(true);
   }
 
   generateError(value: number) {
@@ -142,6 +144,8 @@ export class SudokuService {
         this.gameEnded.set(true);
       }
     }
+    this.shouldSave.set(true);
+
   }
 
   /**
@@ -164,6 +168,7 @@ export class SudokuService {
     }
     // Sort the annotations
     annotations.sort((a, b) => a - b);
+    this.shouldSave.set(true);
   }
 
   /**
@@ -182,3 +187,4 @@ export class SudokuService {
     return completed;
   }
 }
+
