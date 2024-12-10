@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { LevelDialogComponent } from '../../level-dialog/level-dialog.component';
 import { SudokuService } from '../../services/sudoku.service';
+import { LevelDialogComponent } from '../level-dialog/level-dialog.component';
 
 @Component({
   selector: 'app-controls',

@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { difficultyLevelKeys } from '../services/sudokuGenerator';
+import { difficultyLevelKeys } from '../../services/sudokuGenerator';
 
 @Component({
   selector: 'app-level-dialog',
