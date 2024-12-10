@@ -27,7 +27,8 @@ your progress.
 ## Tech Stack
 
 - **Frontend**: [Angular](https://angular.io/)
-- **Libraries** [Angular Material UI](https://material.angular.io/)
+- **Components** [Angular Material UI](https://material.angular.io/)
+- **Libraries** [Sudoku.js](https://github.com/robatron/sudoku.js/tree/master)
 
 ## Installation and Setup
 
@@ -79,7 +80,8 @@ src/
 │   ├── components/         # Angular components
 │   ├── services/           # Shared services (e.g., Sudoku logic, timer)
 │   ├── models/             # Interfaces and models
-│   └── pipes/              # Custom Angular pipes (e.g., formatting)
+│   ├── directives/         # Custom Angular directives 
+|   └── lib/                # External libs, like the sudoku generator
 ├── assets/                 # Static files (images, puzzles)
 ├── environments/           # Environment configurations
 ├── styles.css              # Global styles
