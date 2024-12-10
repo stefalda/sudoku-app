@@ -1,59 +1,105 @@
-# SudokuApp
+# Sudoku App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+A sleek and user-friendly Sudoku web application developed using Angular.
+Challenge yourself with Sudoku puzzles of varying difficulty levels and track
+your progress.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **Responsive Design**: Fully responsive interface, optimized for desktop,
+  tablet, and mobile devices.
+- **Difficulty Levels**: Choose from Easy, Medium, Hard, and Expert puzzles.
+- **Autosave**: Automatically saves your progress so you can resume anytime.
+
+### Not yet implemented
+
+- **Timer and Scoring**: Keep track of your solving time and improve your
+  scores.
+- **Hints System**: Get hints when you're stuck (optional).
+- **Theming**: Light and Dark mode support for comfortable gameplay.
+- **Validation**: Validate your moves in real-time or check the board's
+  correctness when you're ready.
+
+## Demo
+
+[Add a link here if hosted online, e.g., via GitHub Pages or a hosting service.]
+
+## Tech Stack
+
+- **Frontend**: [Angular](https://angular.io/)
+- **Libraries** [Angular Material UI](https://material.angular.io/)
+
+## Installation and Setup
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v20 or higher recommended)
+- [Angular CLI](https://angular.io/cli) (v17 or higher recommended)
+
+### Steps to Run Locally
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/stefalda/sudoku-app.git
+   cd sudoku-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+
+4. Open the app in your browser:
+   ```
+   http://localhost:4200
+   ```
+
+### Production Build
+
+To build the app for production:
 
 ```bash
-ng serve
+ng build --prod
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The production-ready files will be available in the `dist/` directory.
 
-## Code scaffolding
+## Folder Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```plaintext
+src/
+├── app/
+│   ├── components/         # Angular components
+│   ├── services/           # Shared services (e.g., Sudoku logic, timer)
+│   ├── models/             # Interfaces and models
+│   └── pipes/              # Custom Angular pipes (e.g., formatting)
+├── assets/                 # Static files (images, puzzles)
+├── environments/           # Environment configurations
+├── styles.css              # Global styles
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Contribution
 
-```bash
-ng generate --help
-```
+Contributions are welcome! If you'd like to contribute:
 
-## Building
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add a new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
 
-To build the project run:
+## License
 
-```bash
-ng build
-```
+This project is licensed under the [MIT License](LICENSE).
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contact
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For questions or suggestions, feel free to contact me at
+[stefano.falda@gmail.com].
