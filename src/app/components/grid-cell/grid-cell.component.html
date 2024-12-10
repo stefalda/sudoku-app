@@ -1,0 +1,25 @@
+
+<div class="grid-cell"
+    [class.horizontalBorder]="horizontalBorder"
+    [class.verticalBorder]="verticalBorder"
+    [class.focused-cell]="isSelected"
+    [class.focused-line-cell]="isInLine"
+    [class.editable]="!cell().fixed"
+    (click)="select()"
+>
+@if(!cell().value && cell().notes.length>0){
+  <!-- CELL ANNOTATIONS-->
+  <div class="grid-cell-annotations"
+    >
+    @for(note of cell().notes;track $index;){
+      <div>{{note}}</div>
+    }
+  </div>
+} @else
+{
+  <!-- CELL VALUE-->
+<div class="grid-cell-input"
+  [class.invalid] = "cell().invalid"
+>{{cell().value || ''}}</div>
+}
+</div>

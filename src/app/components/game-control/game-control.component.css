@@ -1,0 +1,69 @@
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(9, 50px);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.control {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  user-select: none; /* Prevent text selection */
+  display: inline-block;
+
+  border: 1px solid #ccc; /* Subtle border for a flat design */
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s, transform 0.1s, border-color 0.2s;
+  touch-action: manipulation; /* Improves touch responsiveness */
+}
+
+.control:hover {
+  background-color: #e7e7e7; /* Light gray for hover effect */
+  border-color: #bbbbbbed; /* Slightly darker border */
+}
+
+.control:active {
+  background-color: #bdbdbd; /* Even darker gray for press effect */
+  border-color: #aaa; /* Darker border for press */
+  transform: scale(0.97); /* Subtle shrink effect */
+}
+
+.annotate{
+  color: red;
+  font-weight: bold;
+}
+
+.row{
+  width: 500px;
+  display: flex;
+  align-content: space-between;
+  margin: auto;
+  margin-top:20px;
+  line-height: 50px;
+}
+
+.spacer{
+  flex: 1;
+}
+
+.row > .controls > .control{
+  margin-right: 10px;
+}
+
+.difficulty{
+  margin-right: 10px;
+}
+
+.errors{
+  font-style: normal;
+}

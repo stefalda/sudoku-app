@@ -1,0 +1,30 @@
+.grid-cell {
+  width: 100%;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.grid-cell-input {
+  width: 44px;
+  height: 44px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  border: 2px solid transparent;
+  user-select: none;
+}
+
+input[type=text]:focus {
+  border: 2px solid #1790a9;
+
+}
+
+.horizontalBorder{
+  border-bottom-width:  3px;
+}
+
+
+.verticalBorder{
+  border-left:3px solid;
+}

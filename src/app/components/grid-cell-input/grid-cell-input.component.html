@@ -1,0 +1,16 @@
+
+<div class="grid-cell"
+    [class.horizontalBorder]="horizontalBorder"
+    [class.verticalBorder]="verticalBorder"
+>
+      <input
+      #thisCell
+      restrictNumbers
+      type="text"
+      [value]="cell().value || ''"
+      [readonly]="cell().fixed"
+      (input)="onUpdateCell(thisCell.value)"
+      class="grid-cell-input"
+      maxlength="1"
+    />
+  </div>

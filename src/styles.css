@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog-container {
+  background-color: white !important; /* Set the background color to white */
+  color: black; /* Optional: Ensure text is visible */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}

@@ -1,0 +1,15 @@
+.header{
+  background-color: grey;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  padding: 5px;
+  display: flex;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds the shadow */
+}
+.app-title{
+  font-weight: bold;
+  color: white;
+  flex: 1;
+}

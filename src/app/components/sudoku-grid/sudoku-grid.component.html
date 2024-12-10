@@ -1,0 +1,9 @@
+<div class="grid-container">
+  @for (row of sudokuService.grid(); track $index; let rowIndex = $index) {
+    @for (cell of row; track $index; let colIndex = $index) {
+        <app-grid-cell [rowIndex]="rowIndex" [colIndex]="colIndex" [cell]="cell"
+        ></app-grid-cell>
+    }
+  }
+</div>
+

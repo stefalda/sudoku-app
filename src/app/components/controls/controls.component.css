@@ -1,0 +1,17 @@
+.controls {
+  display: flex;
+  width: 80px;
+  margin-right: 20px;
+  margin-top:-5px;
+}
+
+.control-button{
+  margin-right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.control-button:hover{
+  scale: 1.3;
+}
+
