@@ -1,0 +1,36 @@
+name: Deploy Angular App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Modifica se la tua branch principale è "master"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout del codice sorgente
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Setup Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18 # Specifica la versione di Node.js
+
+    # Installazione delle dipendenze
+    - name: Install dependencies
+      run: npm install
+
+    # Build del progetto Angular
+    - name: Build Angular app
+      run: npm run build -- --configuration production --base-href "/sudoku-app/"
+
+    # Deploy su GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: dist/sudoku-app
