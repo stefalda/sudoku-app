@@ -19,11 +19,16 @@ export class GameControlComponent {
     return this.sudokuService.difficulty;
   }
 
+  isClickable(value: number) {
+    return !this.sudokuService.isValueCompleted(value);
+  }
+
   click(value: number) {
     const currentCell = this.sudokuService.selectedCell();
     if (!currentCell) return;
     this.sudokuService.setCellValue(currentCell.row, currentCell.col, value);
   }
+
 
   toggleAnnotate() {
     this.sudokuService.annotateEnabled.set(!this.sudokuService.annotateEnabled());

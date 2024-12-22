@@ -152,6 +152,20 @@ export class SudokuService {
   getCellValue(row: number, col: number): number | null {
     return this.grid()[row][col].value;
   }
+
+  isValueCompleted(value: number): boolean {
+    let count = 0;
+    const grid = this.grid();
+    for (let row = 0; row < 9; row++) {
+      for (let col = 0; col < 9; col++) {
+        if (grid[row][col].value === value) {
+          count++;
+        }
+      }
+    }
+    return count === 9;
+  }
+
   /**
    * Add or remove the annotation if already present
    * @param row
@@ -191,4 +205,3 @@ export class SudokuService {
     return completed;
   }
 }
-

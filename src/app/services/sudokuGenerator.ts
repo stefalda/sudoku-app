@@ -181,7 +181,7 @@ function convertDifficultyLevel(level: DifficultyLevel): string {
  * @returns
  */
 export function generateSudokuOptimized(level: DifficultyLevel) {
-  const sudokuString = sudoku.generate(convertDifficultyLevel(level));
+  const sudokuString = sudoku.generate(convertDifficultyLevel(level), true);
   const solvedSudokuString = sudoku.solve(sudokuString);
   const grid = convertBoardToGrid(sudokuString);
   const solvedGrid = convertBoardToGrid(solvedSudokuString);

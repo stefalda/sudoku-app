@@ -18,7 +18,7 @@
   </div>
   <div class="grid-container">
   @for(c of controls; track $index;){
-    <div class="control" (click)="click(c)">{{c}}</div>
+    <div class="control" (click)="click(c)" [class.hidden]="!isClickable(c)">{{c}}</div>
   }
 </div>
 

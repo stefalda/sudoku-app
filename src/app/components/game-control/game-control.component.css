@@ -19,7 +19,7 @@
   line-height: var(--control-size);
   user-select: none; /* Prevent text selection */
   display: inline-block;
-  
+
   border: 1px solid #ccc; /* Subtle border for a flat design */
   border-radius: 4px;
   background-color: #f9f9f9;
@@ -69,4 +69,8 @@
 
 .errors{
   font-style: normal;
+}
+
+.hidden{
+  visibility: hidden;
 }
