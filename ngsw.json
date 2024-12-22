@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1734901019298,
+  "timestamp": 1734903766236,
   "index": "/sudoku-app/index.html",
   "assetGroups": [
     {
@@ -15,10 +15,10 @@
         "/sudoku-app/chunk-X235WTC6.js",
         "/sudoku-app/favicon.ico",
         "/sudoku-app/index.html",
-        "/sudoku-app/main-T3DZYA64.js",
+        "/sudoku-app/main-APMMBEP3.js",
         "/sudoku-app/manifest.webmanifest",
         "/sudoku-app/polyfills-FFHMD2TL.js",
-        "/sudoku-app/styles-3SV3VF5V.css"
+        "/sudoku-app/styles-XOJ5CVJ7.css"
       ],
       "patterns": []
     },
@@ -170,7 +170,7 @@
     "/sudoku-app/favicon-16x16.png": "cfece1a47ad212449fbf68a988aa0859603c6a0e",
     "/sudoku-app/favicon-32x32.png": "8920f07ea000522821c82c06a4217c5188307816",
     "/sudoku-app/favicon.ico": "fbcf65cf365c0fddb672a6b1cc93fb8144c9da6f",
-    "/sudoku-app/index.html": "bb38e0c9e384c89da69b85134c107d2fdf3879f1",
+    "/sudoku-app/index.html": "ddd136ab1cec70f5cc44dd874c72753bf001c21e",
     "/sudoku-app/ios/100.png": "3111748d53009d51be824cff30ed889f7d24732d",
     "/sudoku-app/ios/1024.png": "ea304745da8fbc4cb8150e19aa256cdb4d96cae2",
     "/sudoku-app/ios/114.png": "75d4dede1dadf9936c7652e6a64c24e7af2b3be4",
@@ -197,13 +197,13 @@
     "/sudoku-app/ios/76.png": "3e260ff6f8e340df8e0679054476d6557e8f97cd",
     "/sudoku-app/ios/80.png": "404bab2497d03d8a626ba088fee881b67fb12c9d",
     "/sudoku-app/ios/87.png": "53c390fbed8766dbbea5e5cf006938172ffdcb56",
-    "/sudoku-app/main-T3DZYA64.js": "af31032629a024af1873b3510aad0e7796b86743",
+    "/sudoku-app/main-APMMBEP3.js": "e19ec6dc29726dc978a9ace73535395045246d6c",
     "/sudoku-app/manifest.webmanifest": "b5fd8ba4bf77457410f79bae2e1c2ae8ed16fbbf",
     "/sudoku-app/media/MaterialIcons-Regular-2G4ZMI5K.woff2": "7e67acf56f6d527980504c3d0dd2a30d706e5339",
     "/sudoku-app/media/MaterialIcons-Regular-7JMLZOL7.ttf": "b582b869fe05f35f5a1d08cdf50b2b5eb37bae44",
     "/sudoku-app/media/MaterialIcons-Regular-CSYLW52G.woff": "e5fa525648c74213cdeb8554aa77057f0c4d8488",
     "/sudoku-app/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/sudoku-app/styles-3SV3VF5V.css": "def2cc0665f64787c81811a4b81ccbe8da8012f8",
+    "/sudoku-app/styles-XOJ5CVJ7.css": "b30384ec8794d2293b040a68e39c2813e1b94593",
     "/sudoku-app/windows11/LargeTile.scale-100.png": "535af217f4140dcb01aa74cf796c6d7c586c6a65",
     "/sudoku-app/windows11/LargeTile.scale-125.png": "a9d5293e8486603999f580b01beb8e144746157b",
     "/sudoku-app/windows11/LargeTile.scale-150.png": "a776a90cbf10dbc461072d1dc81b642a54f24b2b",
