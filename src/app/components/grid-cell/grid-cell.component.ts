@@ -35,17 +35,18 @@ export class GridCellComponent {
     const selectedCell = this.sudokuService.selectedCell();
     if (!selectedCell) return false;
     return this.rowIndex() == selectedCell.row || this.colIndex() == selectedCell.col ||
-      this.sudokuService.isSameSquare(this.rowIndex(), this.colIndex(), selectedCell.row, selectedCell.col);
+      this.sudokuService.isSameSquare(this.rowIndex(), this.colIndex(), selectedCell.row, selectedCell.col)
+      || (this.cell().value!==0 && this.cell().value === this.sudokuService.getCellValue(selectedCell.row, selectedCell.col));
   }
 
   /**
    * Select the current cell for editing
    */
   select() {
-    if (this.cell().fixed) {
+   /* if (this.cell().fixed) {
       this.sudokuService.selectedCell.set(null);
       return;
-    }
+    }*/
     this.sudokuService.selectedCell.set({ row: this.rowIndex(), col: this.colIndex() });
   }
 

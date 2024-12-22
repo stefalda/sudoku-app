@@ -148,6 +148,10 @@ export class SudokuService {
 
   }
 
+
+  getCellValue(row: number, col: number): number | null {
+    return this.grid()[row][col].value;
+  }
   /**
    * Add or remove the annotation if already present
    * @param row

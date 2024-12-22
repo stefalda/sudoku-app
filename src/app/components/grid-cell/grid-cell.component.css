@@ -6,6 +6,7 @@
   vertical-align: middle;
   padding: 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .grid-cell-input {
@@ -35,7 +36,11 @@
 }
 
 .editable{
-  cursor: pointer;
+  color: rgba(5, 99, 240, 1);
+  font-size: 21px ;
+  font-weight: bold;
+  border-color: black;
+
 }
 
 .invalid{
