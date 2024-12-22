@@ -1,4 +1,5 @@
-import { Injectable, signal, WritableSignal } from '@angular/core';
+import { inject, Injectable, signal, WritableSignal } from '@angular/core';
+import { StringsService } from './strings.service';
 import { Cell, DifficultyLevel, generateSudokuOptimized, Grid } from './sudokuGenerator';
 
 @Injectable({
@@ -18,6 +19,8 @@ export class SudokuService {
   selectedCell = signal<{ row: number, col: number } | null>(null);
   annotateEnabled = signal(false);
   isColorDisabled = signal(false);
+
+  stringsService = inject(StringsService);
 
   getSudoku(level: DifficultyLevel): { grid: Grid, solvedGrid: Grid } {
     return generateSudokuOptimized(level);
@@ -203,5 +206,22 @@ export class SudokuService {
       }
     }
     return completed;
+  }
+
+  getTranslatedLevel(level: string): string {
+    switch (level) {
+      case 'EASY':
+        return this.stringsService.getString("levelEasy");
+      case 'MEDIUM':
+        return this.stringsService.getString("levelMedium");
+      case 'HARD':
+        return this.stringsService.getString("levelHard");
+      case 'VERY_HARD':
+        return this.stringsService.getString("levelVeryHard");
+      case 'EXPERT':
+        return this.stringsService.getString("levelExpert");
+      default:
+        return level;
+    }
   }
 }

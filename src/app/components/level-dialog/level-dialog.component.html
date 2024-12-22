@@ -3,7 +3,7 @@
   <div  class="level-option">
   @for(level of levels; track $index;){
    <div> <button mat-raised-button color="primary" (click)="selectLevel(level)">
-       {{ level }}
+       {{ getTranslatedLevel(level) }}
     </button>
   </div>
 }

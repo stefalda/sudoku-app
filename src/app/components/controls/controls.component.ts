@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { SudokuService } from '../../services/sudoku.service';
 import { LevelDialogComponent } from '../level-dialog/level-dialog.component';
+import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
 
 @Component({
   selector: 'app-controls',
-  imports: [MatDialogModule],
+  imports: [MatDialogModule, LocalizedStringPipe],
   templateUrl: './controls.component.html',
   styleUrl: './controls.component.css'
 })

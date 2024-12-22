@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { SudokuService } from '../../services/sudoku.service';
+import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
 
 @Component({
   selector: 'app-game-control',
-  imports: [],
+  imports: [LocalizedStringPipe],
   templateUrl: './game-control.component.html',
   styleUrl: './game-control.component.css'
 })
@@ -16,7 +17,7 @@ export class GameControlComponent {
   }
 
   get difficulty() {
-    return this.sudokuService.difficulty;
+    return this.sudokuService.getTranslatedLevel(this.sudokuService.difficulty);
   }
 
   isClickable(value: number) {

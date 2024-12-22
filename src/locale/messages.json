@@ -1,0 +1,28 @@
+{
+  "en": {
+    "resetGame": "Reset game",
+    "newGame": "New game",
+    "difficulty": "Difficulty:",
+    "errors": "Errors:",
+    "delete":"Delete",
+    "editMode":"Edit mode on/off",
+    "levelEasy": "Easy",
+    "levelMedium": "Medium",
+    "levelHard": "Hard",
+    "levelVeryHard": "Very Hard",
+    "levelExpert": "Expert"
+  },
+  "it": {
+    "resetGame": "Ricomincia il gioco",
+    "newGame": "Nuova partita",
+    "difficulty": "Difficoltà:",
+    "errors": "Errori:",
+    "delete":"Cancella",
+    "editMode":"Modalità modifica on/off",
+    "levelEasy": "Facile",
+    "levelMedium": "Medio",
+    "levelHard": "Difficile",
+    "levelVeryHard": "Molto difficile",
+    "levelExpert": "Esperto"
+  }
+}

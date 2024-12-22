@@ -1,6 +1,6 @@
 <div class="controls">
-  <div (click)="reset()" title="Reset game" class="control-button"><span class="material-icons"
+  <div (click)="reset()" [title]="'resetGame'|localize"  class="control-button"><span class="material-icons"
     style="margin-top:13px">replay</span></div>
-  <div (click)="newGame()" title="New game" class="control-button"><span class="material-icons"
+  <div (click)="newGame()" [title]="'newGame'|localize"  class="control-button"><span class="material-icons"
     style="margin-top:13px;">play_circle_outline</span></div>
 </div>

@@ -1,6 +1,7 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { SudokuService } from 'src/app/services/sudoku.service';
 import { difficultyLevelKeys } from '../../services/sudokuGenerator';
 
 @Component({
@@ -11,6 +12,8 @@ import { difficultyLevelKeys } from '../../services/sudokuGenerator';
 })
 export class LevelDialogComponent {
   levels = difficultyLevelKeys;
+
+  sudokuService = inject(SudokuService);
 
   constructor(
     public dialogRef: MatDialogRef<LevelDialogComponent>,
@@ -23,5 +26,9 @@ export class LevelDialogComponent {
 
   closeDialog() {
     this.dialogRef.close(); // Chiude il dialog senza selezione
+  }
+
+  getTranslatedLevel(level: string): string {
+    return this.sudokuService.getTranslatedLevel(level);
   }
 }
