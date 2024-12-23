@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1734972650079,
+  "timestamp": 1734995971000,
   "index": "/sudoku-app/index.html",
   "assetGroups": [
     {
@@ -11,11 +11,11 @@
         "ignoreVary": true
       },
       "urls": [
-        "/sudoku-app/chunk-EAGUG5WS.js",
-        "/sudoku-app/chunk-X235WTC6.js",
+        "/sudoku-app/chunk-FJKOV6EH.js",
+        "/sudoku-app/chunk-VP7RGJW4.js",
         "/sudoku-app/favicon.ico",
         "/sudoku-app/index.html",
-        "/sudoku-app/main-JRIHSUL4.js",
+        "/sudoku-app/main-YSNDYGG2.js",
         "/sudoku-app/manifest.webmanifest",
         "/sudoku-app/polyfills-FFHMD2TL.js",
         "/sudoku-app/styles-XOJ5CVJ7.css"
@@ -165,12 +165,12 @@
     "/sudoku-app/android/android-launchericon-72-72.png": "635a122cdac00e165cc78198562c94aeb0d19f87",
     "/sudoku-app/android/android-launchericon-96-96.png": "6e83d57bc50b7b275e4f57f567128529533dc53d",
     "/sudoku-app/apple-touch-icon.png": "378f489d69c8668b5dabcb90d002b9e4768812c8",
-    "/sudoku-app/chunk-EAGUG5WS.js": "ec76ebdb1b75d66d2217ea12a25b3f2dcc9b473d",
-    "/sudoku-app/chunk-X235WTC6.js": "7d7fcbc1dc29dbfab1ec92f1fbc73b8f597e9f90",
+    "/sudoku-app/chunk-FJKOV6EH.js": "58d21d1de02c39d4fb335923fc4826fa8b979d3c",
+    "/sudoku-app/chunk-VP7RGJW4.js": "00d51d02b67d75608aec545226867fa5fed08a07",
     "/sudoku-app/favicon-16x16.png": "cfece1a47ad212449fbf68a988aa0859603c6a0e",
     "/sudoku-app/favicon-32x32.png": "8920f07ea000522821c82c06a4217c5188307816",
     "/sudoku-app/favicon.ico": "fbcf65cf365c0fddb672a6b1cc93fb8144c9da6f",
-    "/sudoku-app/index.html": "74c464e33da4633a49280294c75c28681bed1f00",
+    "/sudoku-app/index.html": "325d4dcaaf6e803cd9961948bef40da4f7b7d20e",
     "/sudoku-app/ios/100.png": "3111748d53009d51be824cff30ed889f7d24732d",
     "/sudoku-app/ios/1024.png": "ea304745da8fbc4cb8150e19aa256cdb4d96cae2",
     "/sudoku-app/ios/114.png": "75d4dede1dadf9936c7652e6a64c24e7af2b3be4",
@@ -197,7 +197,7 @@
     "/sudoku-app/ios/76.png": "3e260ff6f8e340df8e0679054476d6557e8f97cd",
     "/sudoku-app/ios/80.png": "404bab2497d03d8a626ba088fee881b67fb12c9d",
     "/sudoku-app/ios/87.png": "53c390fbed8766dbbea5e5cf006938172ffdcb56",
-    "/sudoku-app/main-JRIHSUL4.js": "f4d034c1d7112e3b99e5d3ab97140c75c523ff27",
+    "/sudoku-app/main-YSNDYGG2.js": "1b41bf6bbd47cafbf5568513fb13f56bbc98db2c",
     "/sudoku-app/manifest.webmanifest": "b5fd8ba4bf77457410f79bae2e1c2ae8ed16fbbf",
     "/sudoku-app/media/MaterialIcons-Regular-2G4ZMI5K.woff2": "7e67acf56f6d527980504c3d0dd2a30d706e5339",
     "/sudoku-app/media/MaterialIcons-Regular-7JMLZOL7.ttf": "b582b869fe05f35f5a1d08cdf50b2b5eb37bae44",
