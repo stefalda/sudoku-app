@@ -1,6 +1,6 @@
 import { inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { StringsService } from './strings.service';
-import { Cell, DifficultyLevel, generateSudokuOptimized, generateSudokuViaWebService, Grid } from './sudokuGenerator';
+import { Cell, DifficultyLevel, generateSudokuViaWebService, Grid } from './sudokuGenerator';
 
 @Injectable({
   providedIn: 'root'
@@ -145,6 +145,20 @@ export class SudokuService {
       // Valid move -- check if it's ended
       if (this.isCompleted()) {
         this.gameEnded.set(true);
+      } else {
+        // Remove the annotation with the current value from the same row, column and square
+        for (let r = 0; r < 9; r++) {
+          for (let c = 0; c < 9; c++) {
+            if (this.isSameSquare(row, col, r, c) && this.isAnnotationPresent(r, c, value)) {
+              this.setAnnotationValue(r, c, value);
+            } else if (r === row && this.isAnnotationPresent(r, c, value)) {
+              this.setAnnotationValue(r, c, value);
+            } else if (c === col && this.isAnnotationPresent(r, c, value)) {
+              this.setAnnotationValue(r, c, value);
+            }
+          }
+        }
+
       }
     }
     this.shouldSave.set(true);
@@ -190,6 +204,10 @@ export class SudokuService {
     // Sort the annotations
     annotations.sort((a, b) => a - b);
     this.shouldSave.set(true);
+  }
+
+  isAnnotationPresent(row: number, col: number, value: number): boolean {
+    return this.grid()[row][col].notes.includes(value);
   }
 
   /**
