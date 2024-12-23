@@ -10,7 +10,11 @@
     "levelMedium": "Medium",
     "levelHard": "Hard",
     "levelVeryHard": "Very Hard",
-    "levelExpert": "Expert"
+    "levelExpert": "Expert",
+    "congratulations": "Congratulations!",
+    "sudokuCompleted": "You've completed the sudoku",
+    "sudokuValid": "The Sudoku is valid",
+    "sudokuInvalid": "The Sudoku is invalid. Please check your entries"
   },
   "it": {
     "resetGame": "Ricomincia il gioco",
@@ -23,6 +27,10 @@
     "levelMedium": "Medio",
     "levelHard": "Difficile",
     "levelVeryHard": "Molto difficile",
-    "levelExpert": "Esperto"
+    "levelExpert": "Esperto",
+    "congratulations": "Congratulazioni!",
+    "sudokuCompleted": "Hai completato il sudoku",
+    "sudokuValid": "Il Sudoku è valido",
+    "sudokuInvalid": "Il Sudoku non è valido. Controlla le tue risposte"
   }
 }
