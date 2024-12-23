@@ -190,6 +190,24 @@ export function generateSudokuOptimized(level: DifficultyLevel) {
 }
 
 /**
+ * Generate a sudoku using an external library
+ * "quite" faster for more complex schemas...
+ * @param level
+ * @returns
+ */
+export async function generateSudokuViaWebService(level: DifficultyLevel) {
+  const levelIndex = difficultyLevelKeys.indexOf(level) + 1;
+  const response = await fetch('https://sudoku_generator.sfalda.com/?level=' + levelIndex);
+  const data: { sudokuString: string, solutionString: string } = await response.json();
+  const sudokuString = data.sudokuString;
+  const solvedSudokuString = data.solutionString;
+  const grid = convertBoardToGrid(sudokuString);
+  const solvedGrid = convertBoardToGrid(solvedSudokuString);
+  console.log(grid);
+  return { grid, solvedGrid };
+}
+
+/**
  * Convert the string to a Grid
  * @param board
  * @returns

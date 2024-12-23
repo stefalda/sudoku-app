@@ -38,11 +38,13 @@ export class AppComponent {
 
   ngOnInit(): void {
     // Restore an existing game or start from scratch
-    this.saveService.restore();
+    this.saveService.restore().then(() => {
+      console.log('Game restored');
+    });
   }
 
-  generateNewGame() {
-    this.sudokuService.generateNewGame();
+  async generateNewGame() {
+    await this.sudokuService.generateNewGame();
   }
 
   resetGrid() {
@@ -51,8 +53,15 @@ export class AppComponent {
 
   validateGrid() {
     const grid = this.sudokuService.grid();
+
+    this.dialog.open(GameDialogComponent, {
+      data: {
+        title: this.stringsService.getString('congratulations'),
+        message: this.stringsService.getString('sudokuValid')
+      }
+    });
+
     if (!grid) return;
-    
     if (this.sudokuService.isValidSudoku(grid)) {
       this.dialog.open(GameDialogComponent, {
         data: {

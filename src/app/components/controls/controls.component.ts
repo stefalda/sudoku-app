@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
 import { SudokuService } from '../../services/sudoku.service';
 import { LevelDialogComponent } from '../level-dialog/level-dialog.component';
-import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
 
 @Component({
   selector: 'app-controls',
@@ -34,9 +34,9 @@ export class ControlsComponent {
       data: {} // Passa eventuali dati qui
     });
 
-    dialogRef.afterClosed().subscribe((selectedLevel) => {
+    dialogRef.afterClosed().subscribe(async (selectedLevel) => {
       if (selectedLevel) {
-        this.sudokuService.generateNewGame(selectedLevel);
+        await this.sudokuService.generateNewGame(selectedLevel);
       } else {
         console.log('Nessun livello selezionato');
       }

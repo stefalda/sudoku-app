@@ -1,0 +1,40 @@
+{
+  "version": "4",
+  "remote": {
+    "https://deno.land/std@0.209.0/async/delay.ts": "d414b6ff5b597a3b8a90b1b860b675062a106ad0e311816256f4696aa40ec1a1",
+    "https://deno.land/std@0.209.0/http/server.ts": "f3cde6672e631d3e00785743cfa96bfed275618c0352c5ae84abbe5a2e0e4afc"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@angular-devkit/build-angular@^19.0.6",
+        "npm:@angular/animations@19",
+        "npm:@angular/cdk@^19.0.1",
+        "npm:@angular/cli@^19.0.6",
+        "npm:@angular/common@19",
+        "npm:@angular/compiler-cli@19",
+        "npm:@angular/compiler@19",
+        "npm:@angular/core@19",
+        "npm:@angular/forms@19",
+        "npm:@angular/material@^19.0.1",
+        "npm:@angular/platform-browser-dynamic@19",
+        "npm:@angular/platform-browser@19",
+        "npm:@angular/router@19",
+        "npm:@angular/service-worker@19",
+        "npm:@types/jasmine@5.1",
+        "npm:jasmine-core@5.4",
+        "npm:karma-chrome-launcher@3.2",
+        "npm:karma-coverage@2.2",
+        "npm:karma-jasmine-html-reporter@2.1",
+        "npm:karma-jasmine@5.1",
+        "npm:karma@6.4",
+        "npm:localized-strings@~0.2.4",
+        "npm:material-design-icons-iconfont@^6.7.0",
+        "npm:rxjs@7.8",
+        "npm:tslib@^2.3.0",
+        "npm:typescript@~5.6.2",
+        "npm:zone.js@0.15"
+      ]
+    }
+  }
+}

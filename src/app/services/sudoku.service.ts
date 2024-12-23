@@ -1,6 +1,6 @@
 import { inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { StringsService } from './strings.service';
-import { Cell, DifficultyLevel, generateSudokuOptimized, Grid } from './sudokuGenerator';
+import { Cell, DifficultyLevel, generateSudokuOptimized, generateSudokuViaWebService, Grid } from './sudokuGenerator';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,8 @@ export class SudokuService {
 
   stringsService = inject(StringsService);
 
-  getSudoku(level: DifficultyLevel): { grid: Grid, solvedGrid: Grid } {
-    return generateSudokuOptimized(level);
+  async getSudoku(level: DifficultyLevel): Promise<{ grid: Grid, solvedGrid: Grid }> {
+    return await generateSudokuViaWebService(level);
   }
 
   /**
@@ -87,13 +87,13 @@ export class SudokuService {
   }
 
 
-  generateNewGame(difficulty?: DifficultyLevel) {
+  async generateNewGame(difficulty?: DifficultyLevel) {
     if (difficulty) {
       this.difficulty = difficulty;
     }
     this.errors.set(0);
     this.gameEnded.set(false);
-    const { grid, solvedGrid } = this.getSudoku(this.difficulty);
+    const { grid, solvedGrid } = await this.getSudoku(this.difficulty);
     this.solvedGrid = solvedGrid;
     this.originalGrid = structuredClone(grid);
     this.grid.set(grid);

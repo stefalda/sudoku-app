@@ -34,7 +34,10 @@ You can play it now here:
 
 - **Frontend**: [Angular](https://angular.io/)
 - **Components** [Angular Material UI](https://material.angular.io/)
-- **Libraries** [Sudoku.js](https://github.com/robatron/sudoku.js/tree/master)
+
+- **Libraries** [Sudoku.js](https://github.com/robatron/sudoku.js/tree/master) -
+  No more used, in favour of the library
+  [qqwing](https://qqwing.com/download.html) exposed via web service.
 
 ## Installation and Setup
 

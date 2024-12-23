@@ -30,10 +30,10 @@ export class SaveService {
     this.sudokuService.shouldSave.set(false);
   }
 
-  restore() {
+  async restore() {
     const savedState = localStorage.getItem("sudoku_app_state");
     if (!savedState) {
-      this.sudokuService.generateNewGame();
+      await this.sudokuService.generateNewGame();
       return;
     }
     const state = JSON.parse(savedState);
