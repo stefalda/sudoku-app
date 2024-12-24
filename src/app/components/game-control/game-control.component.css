@@ -25,6 +25,7 @@
   background-color: #f9f9f9;
   transition: background-color 0.2s, transform 0.1s, border-color 0.2s;
   touch-action: manipulation; /* Improves touch responsiveness */
+  margin-right: 10px;
 }
 
 .control:hover {
@@ -59,9 +60,6 @@
   flex: 1;
 }
 
-.row > .controls > .control{
-  margin-right: 10px;
-}
 
 .difficulty{
   margin-right: 10px;

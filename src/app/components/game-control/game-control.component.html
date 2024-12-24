@@ -1,35 +1,29 @@
 <div class="row">
   <div class="controls">
 
-    <div class="control" (click)="toggleAnnotate()"
-    [title]="'editMode'|localize"
-    ><span class="material-icons"
-      [class.annotate]="sudokuService.annotateEnabled()"
-      style="margin-top:var(--margin-top-icon);">edit</span></div>
-    </div>
-
-    <div class="control" (click)="click(0)"
-      [title]="'delete'|localize"
-    ><span class="material-icons" style="margin-top:var(--margin-top-icon)">delete</span></div>
-
-    <div class="control" (click)="hint()"
-    [title]="'hint'|localize"
-  ><span class="material-icons" style="margin-top:var(--margin-top-icon)">help</span></div>
-
-    <div class="spacer"></div>
-    <div class="difficulty">
-      {{'difficulty'|localize}}: {{difficulty}}
-    </div>
-    <div class="errors">
-      {{'hints'|localize}}: {{hints}}
-     </div>
-   <div class="errors">
-     {{'errors'|localize}}: {{errors}}
-    </div>
+    <div class="control" (click)="toggleAnnotate()" [title]="'editMode'|localize"><span class="material-icons"
+        [class.annotate]="sudokuService.annotateEnabled()" style="margin-top:var(--margin-top-icon);">edit</span></div>
   </div>
-  <div class="grid-container">
+
+  <div class="control" (click)="click(0)" [title]="'delete'|localize"><span class="material-icons"
+      style="margin-top:var(--margin-top-icon)">delete</span></div>
+
+  <div class="control" (click)="hint()" [title]="'hintsTitle'|localize"><span class="material-icons"
+      style="margin-top:var(--margin-top-icon)">help</span></div>
+
+  <div class="spacer"></div>
+  <div class="difficulty">
+    {{'difficulty'|localize}}: {{difficulty}}
+  </div>
+  <div class="errors">
+    {{'hints'|localize}}: {{hints}}
+  </div>
+  <div class="errors">
+    {{'errors'|localize}}: {{errors}}
+  </div>
+</div>
+<div class="grid-container">
   @for(c of controls; track $index;){
-    <div class="control" (click)="click(c)" [class.hidden]="!isClickable(c)">{{c}}</div>
+  <div class="control" (click)="click(c)" [class.hidden]="!isClickable(c)">{{c}}</div>
   }
 </div>
-
