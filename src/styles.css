@@ -9,6 +9,9 @@ html, body {
 
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .custom-dialog-container {
@@ -21,6 +24,36 @@ body {
   --size: 40px; /* Size for sudoku cells */
   --control-size: 40px; /* Size for control buttons */
   --margin-top-icon: 5px;
+
+  /* Light theme (default) */
+  --bg-color: #ffffff;
+  --border-color: #000000;
+  --text-color: #333333;
+  --control-bg: #f9f9f9;
+  --control-border: #ccc;
+  --control-hover-bg: #e7e7e7;
+  --control-hover-border: #bbbbbbed;
+  --control-active-bg: #bdbdbd;
+  --control-active-border: #aaa;
+
+  --focused-cell: #b5c7d8;
+  --focused-line-cell: #dbe6f1;
+  --editable-text-color: #0563f0;
+}
+
+.dark-theme {
+  --bg-color: #4a4848;
+  --border-color: #ffffff;
+  --text-color: #ffffff;
+  --control-bg: #2d2d2d;
+  --control-border: #ede8e8;
+  --control-hover-bg: #3d3d3d;
+  --control-hover-border: #505050;
+  --control-active-bg: #505050;
+  --control-active-border: #606060;
+  --focused-cell: #b5c7d840;
+  --focused-line-cell: #dbe6f186;
+  --editable-text-color: #0563f0;
 }
 
 /* Media queries for different screen sizes */

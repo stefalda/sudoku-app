@@ -6,10 +6,13 @@ import { SudokuService } from '../../services/sudoku.service';
   selector: 'app-game-control',
   imports: [LocalizedStringPipe],
   templateUrl: './game-control.component.html',
-  styleUrl: './game-control.component.css'
+  styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent {
+
   sudokuService = inject(SudokuService);
+  constructor() { }
+
   controls = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
   get errors() {

@@ -19,23 +19,23 @@
   line-height: var(--control-size);
   user-select: none; /* Prevent text selection */
   display: inline-block;
+  margin-right: 10px;
 
-  border: 1px solid #ccc; /* Subtle border for a flat design */
+  border: 1px solid var(--control-border); /* Subtle border for a flat design */
   border-radius: 4px;
-  background-color: #f9f9f9;
+  background-color: var(--control-bg);
   transition: background-color 0.2s, transform 0.1s, border-color 0.2s;
   touch-action: manipulation; /* Improves touch responsiveness */
-  margin-right: 10px;
 }
 
 .control:hover {
-  background-color: #e7e7e7; /* Light gray for hover effect */
-  border-color: #bbbbbbed; /* Slightly darker border */
+  background-color: var(--control-hover-bg); /* Light gray for hover effect */
+  border-color: var(--control-hover-border); /* Slightly darker border */
 }
 
 .control:active {
-  background-color: #bdbdbd; /* Even darker gray for press effect */
-  border-color: #aaa; /* Darker border for press */
+  background-color: var(--control-active-bg); /* Even darker gray for press effect */
+  border-color: var(--control-active-border); /* Darker border for press */
   transform: scale(0.97); /* Subtle shrink effect */
 }
 

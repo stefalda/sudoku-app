@@ -1,19 +1,21 @@
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
+import { ThemeService } from 'src/app/services/theme.service';
 import { SudokuService } from '../../services/sudoku.service';
 import { LevelDialogComponent } from '../level-dialog/level-dialog.component';
 
 @Component({
   selector: 'app-controls',
-  imports: [MatDialogModule, LocalizedStringPipe],
+  imports: [MatDialogModule, LocalizedStringPipe, AsyncPipe],
   templateUrl: './controls.component.html',
   styleUrl: './controls.component.css'
 })
 export class ControlsComponent {
 
   sudokuService = inject(SudokuService);
-
+  themeService = inject(ThemeService);
   constructor(private dialog: MatDialog) {
 
   }
@@ -41,5 +43,9 @@ export class ControlsComponent {
         console.log('Nessun livello selezionato');
       }
     });
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 }

@@ -1,6 +1,11 @@
 <div class="controls">
-  <div (click)="reset()" [title]="'resetGame'|localize"  class="control-button"><span class="material-icons"
-    style="margin-top:13px">replay</span></div>
-  <div (click)="newGame()" [title]="'newGame'|localize"  class="control-button"><span class="material-icons"
-    style="margin-top:13px;">play_circle_outline</span></div>
+  <div class="control-button" (click)="toggleTheme()" [title]="'toggleTheme'|localize">
+    <span class="material-icons" style="margin-top:13px">
+      {{(themeService.isDarkTheme$ | async) ? 'light_mode' : 'dark_mode'}}
+    </span>
+  </div>
+  <div (click)="reset()" [title]="'resetGame'|localize" class="control-button"><span class="material-icons"
+      style="margin-top:13px">replay</span></div>
+  <div (click)="newGame()" [title]="'newGame'|localize" class="control-button"><span class="material-icons"
+      style="margin-top:13px;">play_circle_outline</span></div>
 </div>

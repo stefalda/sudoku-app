@@ -1,7 +1,7 @@
 .grid-cell {
   width: 100%;
   height: var(--size);
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   text-align: center;
   vertical-align: middle;
   padding: 0;
@@ -18,11 +18,11 @@
 }
 
 .focused-cell{
-  background-color: #b5c7d8;
+  background-color: var(--focused-cell);
 }
 
 .focused-line-cell{
-  background-color: #dbe6f1;
+  background-color: var(--focused-line-cell);
 }
 
 .horizontalBorder{
@@ -33,13 +33,14 @@
 
 .verticalBorder{
   border-left:3px solid;
+  border-color: var(--border-color);
 }
 
 .editable{
-  color: rgba(5, 99, 240, 1);
+  color:var(--editable-text-color);
   font-size: 21px ;
   font-weight: bold;
-  border-color: black;
+  border-color: var(--border-color);
 
 }
 
