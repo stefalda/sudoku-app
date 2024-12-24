@@ -53,7 +53,7 @@ body {
   --control-active-border: #606060;
   --focused-cell: #b5c7d840;
   --focused-line-cell: #dbe6f186;
-  --editable-text-color: #0563f0;
+  --editable-text-color: #6aa3f9;
 }
 
 /* Media queries for different screen sizes */
