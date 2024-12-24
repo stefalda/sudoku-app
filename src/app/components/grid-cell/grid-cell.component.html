@@ -1,25 +1,16 @@
-
-<div class="grid-cell"
-    [class.horizontalBorder]="horizontalBorder"
-    [class.verticalBorder]="verticalBorder"
-    [class.focused-cell]="isSelected"
-    [class.focused-line-cell]="isInLine"
-    [class.editable]="!cell().fixed"
-    (click)="select()"
->
-@if(!cell().value && cell().notes.length>0){
+<div class="grid-cell" [class.horizontalBorder]="horizontalBorder" [class.verticalBorder]="verticalBorder"
+  [class.focused-cell]="isSelected" [class.focused-line-cell]="isInLine" [class.editable]="!cell().fixed"
+  (click)="select()">
+  @if(!cell().value && cell().notes.length>0){
   <!-- CELL ANNOTATIONS-->
-  <div class="grid-cell-annotations"
-    >
+  <div class="grid-cell-annotations no-select">
     @for(note of cell().notes;track $index;){
-      <div>{{note}}</div>
+    <div>{{note}}</div>
     }
   </div>
-} @else
-{
+  } @else
+  {
   <!-- CELL VALUE-->
-<div class="grid-cell-input"
-  [class.invalid] = "cell().invalid"
->{{cell().value || ''}}</div>
-}
+  <div class="grid-cell-input no-select" [class.invalid]="cell().invalid">{{cell().value || ''}}</div>
+  }
 </div>
