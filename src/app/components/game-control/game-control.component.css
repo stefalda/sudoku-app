@@ -65,10 +65,12 @@
 
 .difficulty{
   margin-right: 10px;
+  line-height: var(--control-size);
 }
 
 .errors{
   font-style: normal;
+  line-height: var(--control-size);
 }
 
 .hidden{

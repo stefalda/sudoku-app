@@ -1,6 +1,6 @@
 import { inject, Injectable, signal, WritableSignal } from '@angular/core';
 import { StringsService } from './strings.service';
-import { Cell, DifficultyLevel, generateSudokuViaWebService, Grid } from './sudokuGenerator';
+import { Cell, DifficultyLevel, generateSudokuOptimized, generateSudokuViaWebService, Grid } from './sudokuGenerator';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ import { Cell, DifficultyLevel, generateSudokuViaWebService, Grid } from './sudo
 export class SudokuService {
   difficulty: DifficultyLevel = 'EASY';
   errors = signal(0);
+  hints = signal(0);
   gameEnded = signal(false);
   shouldSave = signal(false);
 
@@ -22,8 +23,26 @@ export class SudokuService {
 
   stringsService = inject(StringsService);
 
+  /**
+   * Generates a new Sudoku puzzle.
+   * It uses a web service if the user is online, otherwise it uses a local algorithm.
+   * @param level
+   * @returns
+   */
   async getSudoku(level: DifficultyLevel): Promise<{ grid: Grid, solvedGrid: Grid }> {
-    return await generateSudokuViaWebService(level);
+    if (this.isOnline()) {
+      return await generateSudokuViaWebService(level);
+    } else {
+      return generateSudokuOptimized(level);
+    }
+  }
+
+  /**
+   * Checks if the user is online.
+   * @returns True if online, otherwise false.
+   */
+  isOnline(): boolean {
+    return navigator.onLine;
   }
 
   /**
@@ -92,6 +111,7 @@ export class SudokuService {
       this.difficulty = difficulty;
     }
     this.errors.set(0);
+    this.hints.set(0);
     this.gameEnded.set(false);
     const { grid, solvedGrid } = await this.getSudoku(this.difficulty);
     this.solvedGrid = solvedGrid;
@@ -105,6 +125,7 @@ export class SudokuService {
 
   resetGrid() {
     this.errors.set(0);
+    this.hints.set(0);
     this.grid.set(structuredClone(this.originalGrid));
     this.gameEnded.set(false);
     this.selectedCell.set(null);
@@ -241,5 +262,14 @@ export class SudokuService {
       default:
         return level;
     }
+  }
+
+  /**
+   * Returns the correct value for the cell looking inside the solved grid
+   * @param row
+   * @param col
+   */
+  getCellHint(row: number, col: number): number {
+    return this.solvedGrid[row][col].value;
   }
 }

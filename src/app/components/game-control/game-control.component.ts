@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { SudokuService } from '../../services/sudoku.service';
 import { LocalizedStringPipe } from 'src/app/pipes/localizedString.pipe';
+import { SudokuService } from '../../services/sudoku.service';
 
 @Component({
   selector: 'app-game-control',
@@ -14,6 +14,10 @@ export class GameControlComponent {
 
   get errors() {
     return this.sudokuService.errors();
+  }
+
+  get hints() {
+    return this.sudokuService.hints();
   }
 
   get difficulty() {
@@ -30,6 +34,13 @@ export class GameControlComponent {
     this.sudokuService.setCellValue(currentCell.row, currentCell.col, value);
   }
 
+  hint() {
+    const currentCell = this.sudokuService.selectedCell();
+    if (!currentCell) return;
+    const value = this.sudokuService.getCellHint(currentCell.row, currentCell.col);
+    this.sudokuService.hints.update(hints => hints + 1);
+    this.sudokuService.setCellValue(currentCell.row, currentCell.col, value);
+  }
 
   toggleAnnotate() {
     this.sudokuService.annotateEnabled.set(!this.sudokuService.annotateEnabled());
