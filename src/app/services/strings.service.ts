@@ -7,7 +7,7 @@ export class StringsService {
   private strings;
   constructor() {
     this.strings = new LocalizedStrings(stringsJson);
-    console.log(this.strings);
+    // console.log(this.strings);
   }
 
   getString(key: string) {
